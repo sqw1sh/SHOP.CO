@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-user-drag: none;
+}
+
+$black-color: #000000;
+$white-color: #FFFFFF;
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-center-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('../fonts/Satoshi-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'SatoshiMedium';
+    src: url('../fonts/Satoshi-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'SatoshiBold';
+    src: url('../fonts/Satoshi-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'IntegralCFBold';
+    src: url('../fonts/IntegralCF-Bold.ttf');
+}
+
+body {
+    background-color: $white-color;
+    color: $black-color;
+    font-family: 'Satoshi', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.btn {
+    font-family: 'SatoshiMedium', sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid transparent;
+    outline: 0;
+    border-radius: 62px;
+    min-width: 210px;
+    height: 52px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}

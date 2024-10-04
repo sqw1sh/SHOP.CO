@@ -1,0 +1,194 @@
+@import 'base';
+
+.discount {
+    background-color: $black-color;
+    color: $white-color;
+    padding-top: 9px;
+    padding-bottom: 9px;
+
+    .container {
+        @include flex-center;
+
+        .discount-text {
+            margin-left: auto;
+            font-size: 14px;
+
+            .discount-link {
+                font-family: 'SatoshiMedium', sans-serif;
+                text-decoration: underline;
+                color: $white-color;
+            }
+        }
+
+        .discount-close {
+            margin-left: auto;
+            cursor: pointer;
+        }
+    }
+}
+
+.header {
+    background-color: $white-color;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    .container {
+        @include flex-center-between;
+
+        .menu {
+            .menu-list {
+                list-style: none;
+                @include flex-center-between;
+                gap: 24px;
+
+                .menu-item {
+                    .menu-link {
+                        font-size: 16px;
+                        color: $black-color;
+
+                        &.menu-link-group {
+                            display: inline-flex;
+                            align-items: center;
+                            gap: 4px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .search {
+            position: relative;
+
+            .search-input {
+                background-color: #F0F0F0;
+                min-width: 561px;
+                height: 48px;
+                border: 0;
+                outline: 0;
+                border-radius: 62px;
+                padding: 12px 16px 12px 52px;
+                font-family: 'Satoshi', sans-serif;
+                font-size: 16px;
+                color: $black-color;
+
+                &::placeholder {
+                    color: rgba($color: $black-color, $alpha: 40%);
+                }
+            }
+
+            .search-image {
+                position: absolute;
+                top: 12px;
+                left: 16px;
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+        .action {
+            @include flex-center-between;
+            gap: 14px;
+        }
+    }
+}
+
+.page {
+    .main {
+        padding-top: 103px;
+        padding-bottom: 116px;
+        background: #F2F0F1 url('../images/bg-main.webp') no-repeat bottom right;
+        overflow: hidden;
+        position: relative;
+
+        .container {
+            .main-title {
+                font-family: 'IntegralCFBold', sans-serif;
+                font-size: 64px;
+                line-height: 64px;
+                max-width: 577px;
+                margin-bottom: 32px;
+            }
+
+            .main-text {
+                font-size: 16px;
+                line-height: 22px;
+                color: rgba($color: $black-color, $alpha: 60%);
+                max-width: 545px;
+                margin-bottom: 32px;
+            }
+
+            .main-action {
+                margin-bottom: 48px;
+
+                .btn-main {
+                    background-color: $black-color;
+                    color: $white-color;
+                }
+            }
+
+            .main-stats {
+                display: flex;
+                align-items: center;
+                gap: 32px;
+
+                .main-stat {
+                    .main-stat-title {
+                        font-family: 'SatoshiBold', sans-serif;
+                        font-size: 40px;
+                    }
+
+                    .main-stat-text {
+                        font-size: 16px;
+                        line-height: 22px;
+                        color: rgba($color: $black-color, $alpha: 60%);
+                    }
+                }
+
+                .vr {
+                    height: 74px;
+                    width: 1px;
+                    background-color: rgba($color: $black-color, $alpha: 10%);
+                }
+            }
+        }
+
+        .main-extra {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            pointer-events: none;
+
+            .star {
+                position: absolute;
+                z-index: 1;
+
+                &:first-child {
+                    top: 86px;
+                    left: 90%;
+                }
+
+                &:last-child {
+                    top: 297px;
+                    left: 60%;
+                }
+            }
+        }
+    }
+
+    .brand {
+        background-color: $black-color;
+        padding-top: 42px;
+        padding-bottom: 42px;
+
+        .container {
+            @include flex-center-between;
+
+            .brand-item {
+                user-select: none;
+                -webkit-user-select: none;
+            }
+        }
+    }
+}
