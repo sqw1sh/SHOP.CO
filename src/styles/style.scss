@@ -191,4 +191,46 @@
             }
         }
     }
+
+    .new {
+        padding-top: 72px;
+
+        .container {
+            .new-title {
+                margin-bottom: 55px;
+            }
+
+            .card-goods {
+                margin-bottom: 36px;
+            }
+
+            .new-action {
+                text-align: center;
+                margin-bottom: 64px;
+            }
+
+            hr {
+                height: 1px;
+                border: 0;
+                border-top: 1px solid rgba($color: $black-color, $alpha: 10%);
+            }
+        }
+    }
+
+    .top {
+        padding-top: 64px;
+        padding-bottom: 80px;
+
+        .top-title {
+            margin-bottom: 55px;
+        }
+
+        .card-goods {
+            margin-bottom: 36px;
+        }
+
+        .top-action {
+            text-align: center;
+        }
+    }
 }

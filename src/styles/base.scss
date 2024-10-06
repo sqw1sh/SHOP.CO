@@ -67,4 +67,99 @@ a {
     height: 52px;
     padding-top: 15px;
     padding-bottom: 15px;
+
+    &.btn-empty {
+        background-color: transparent;
+        border-color: rgba($color: $black-color, $alpha: 10%);
+    }
+}
+
+.section-title {
+    font-family: 'IntegralCFBold', sans-serif;
+    font-size: 48px;
+    text-align: center;
+}
+
+
+.card-goods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 295px);
+    grid-gap: 20px;
+
+    .card-good {
+        width: 100%;
+    
+        .card-good-image {
+            background-color: #F0EEED;
+            text-align: center;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 16px;
+        }
+    
+        .card-good-title {
+            font-family: 'SatoshiBold', sans-serif;
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+    
+        .card-good-rating {
+            display: flex;
+            align-items: center;
+            gap: 13px;
+            margin-bottom: 8px;
+    
+            .card-good-rating-star {
+                display: flex;
+                align-items: center;
+                gap: 5.31px;
+            }
+    
+            .card-good-rating-number {
+                font-size: 0;
+                
+                span {
+                    font-size: 14px;
+    
+                    &:last-child {
+                        color: rgba($color: $black-color, $alpha: 60%);
+                    }
+                }
+            }
+        }
+    
+        .card-good-price {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+    
+            span {
+                font-family: 'SatoshiBold', sans-serif;
+                font-size: 24px;
+            }
+    
+            .card-good-price-discount {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+    
+                span {
+                    &:first-child {
+                        color: rgba($color: $black-color, $alpha: 40%);
+                        text-decoration: line-through;
+                    }
+    
+                    &:last-child {
+                        display: inline-block;
+                        font-family: 'SatoshiMedium', sans-serif;
+                        font-size: 12px;
+                        padding: 6px 13px;
+                        color: #FF3333;
+                        background-color: rgba($color: #FF3333, $alpha: 10%);
+                        border-radius: 62px;
+                    }
+                }
+            }
+        }
+    }
 }
