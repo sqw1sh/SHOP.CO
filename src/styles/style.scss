@@ -233,4 +233,121 @@
             text-align: center;
         }
     }
+
+    .style {
+        .container {
+            background-color: #F0F0F0;
+            border-radius: 40px;
+            padding-top: 70px;
+            padding-bottom: 76px;
+
+            .style-title {
+                margin-bottom: 64px;
+            }
+
+            .styles {
+                @include flex-center;
+                flex-wrap: wrap;
+                gap: 20px;
+
+                .style-item {
+                    display: block;
+                    text-decoration: none;
+                    background-color: $white-color;
+                    border-radius: 20px;
+                    position: relative;
+                    overflow: hidden;
+
+                    &.wide {
+                        min-width: 684px;
+                    }
+
+                    &.short {
+                        min-width: 407px;
+                    }
+
+
+                    .style-item-image {
+                        font-size: 0;
+                        text-align: right;
+                        height: 100%;
+
+                        img {
+                            height: 100%;
+                        }
+                    }
+
+                    .style-item-title {
+                        position: absolute;
+                        top: 25px;
+                        left: 36px;
+                        font-family: 'SatoshiBold', sans-serif;
+                        font-size: 36px;
+                        color: $black-color;
+                    }
+                }
+            }
+        }
+    }
+
+    .review {
+        padding-top: 80px;
+        padding-bottom: 170px;
+
+        .container {
+            .review-header {
+                @include flex-end-between;
+                margin-bottom: 40px;
+
+                .review-action {
+                    display: flex;
+                    align-items: center;
+                    gap: 16px;
+
+                    svg {
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .reviews {
+                display: grid;
+                justify-content: center;
+                grid-template-columns: repeat(auto-fit, 400px);
+                grid-gap: 20px;
+
+                .review-item {
+                    border: 1px solid rgba($color: $black-color, $alpha: 10%);
+                    border-radius: 20px;
+                    padding: 28px 32px;
+
+                    .review-item-rating {
+                        display: flex;
+                        align-items: center;
+                        gap: 6.49px;
+                        margin-bottom: 15px;
+                    }
+
+                    .review-item-author {
+                        display: flex;
+                        align-items: center;
+                        gap: 4px;
+                        margin-bottom: 12px;
+
+                        span {
+                            font-family: 'SatoshiBold', sans-serif;
+                            font-size: 20px;
+                            line-height: 22px;
+                        }
+                    }
+
+                    .review-item-message {
+                        font-size: 16px;
+                        line-height: 22px;
+                        color: rgba($color: $black-color, $alpha: 60%);
+                    }
+                }
+            }
+        }
+    }
 }
