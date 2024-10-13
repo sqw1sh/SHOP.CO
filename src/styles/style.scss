@@ -351,3 +351,175 @@
         }
     }
 }
+
+.footer {
+    padding-top: 140px;
+    padding-bottom: 81.97px;
+    background-color: #F0F0F0;
+    position: relative;
+
+    .container {
+        .wrapper {
+            @include flex-center-between;
+
+            &:last-child {
+                .copy {
+                    font-size: 14px;
+                    color: rgba($color: $black-color, $alpha: 60%);
+                }
+
+                .action {
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+
+                    a {
+                        @include flex-center;
+                        width: 46.61px;
+                        height: 30.03px;
+                        border: 1px solid #D6DCE5;
+                        background-color: $white-color;
+                        border-radius: 5.38px;
+                    }
+                }
+            }
+
+            .info {
+                max-width: 248px;
+
+                .logo {
+                    display: inline-block;
+                    margin-bottom: 25px;
+                }
+
+                .info-text {
+                    font-size: 14px;
+                    line-height: 22px;
+                    color: rgba($color: $black-color, $alpha: 60%);
+                    margin-bottom: 35px;
+                }
+
+                .info-action {
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+
+                    .action-link {
+                        @include flex-center;
+                        width: 28px;
+                        height: 28px;
+                        border-radius: 50%;
+                        border: 1px solid rgba($color: $black-color, $alpha: 20%);
+                        transition: .3s;
+                        background-color: $white-color;
+
+                        &:hover {
+                            background-color: $black-color;
+
+                            svg {
+                                path {
+                                    fill: $white-color;
+                                }
+                            }
+                        }
+
+                        svg {
+                            path {
+                                fill: $black-color;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .help {
+                .help-title {
+                    font-family: 'SatoshiMedium', sans-serif;
+                    font-size: 16px;
+                    letter-spacing: 3px;
+                    line-height: 18px;
+                    text-transform: uppercase;
+                    margin-bottom: 26px;
+                }
+
+                .help-list {
+                    list-style: none;
+
+                    .help-list-item {
+                        &:not(:last-child) {
+                            margin-bottom: 20px;
+                        }
+
+                        a {
+                            font-size: 16px;
+                            line-height: 19px;
+                            color: rgba($color: $black-color, $alpha: 60%);
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        hr {
+            margin-top: 50px;
+            margin-bottom: 25px;
+            border: 0;
+            border-top: 1px solid rgba($color: $black-color, $alpha: 10%);
+            height: 1px;
+        }
+    }
+
+    .callback {
+        @include flex-center-between;
+        position: absolute;
+        top: 0;
+        left: calc(50% - 620px);
+        background-color: $black-color;
+        border-radius: 20px;
+        padding: 36px 64px;
+        min-width: 1240px;
+        color: $white-color;
+        transform: translateY(-50%);
+
+        .callback-title {
+            font-family: 'IntegralCFBold', sans-serif;
+            font-size: 40px;
+            line-height: 45px;
+            max-width: 551px;
+        }
+
+        .callback-form {
+            .form-mail {
+                position: relative;
+                margin-bottom: 14px;
+
+                input {
+                    &::placeholder {
+                        color: rgba($color: $black-color, $alpha: 40%);
+                    }
+
+                    font-size: 16px;
+                    padding: 12px 16px 12px 52px;
+                    border-radius: 62px;
+                    height: 48px;
+                    border: 0;
+                    outline: 0;
+                }
+
+                svg {
+                    position: absolute;
+                    top: 12px;
+                    left: 16px;
+                }
+            }
+
+            .form-btn {
+                background-color: $white-color;
+                width: 100%;
+                padding: 12px 16px;
+                height: 46px;
+            }
+        }
+    }
+}
