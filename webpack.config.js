@@ -25,6 +25,8 @@ module.exports = {
 		new CopyPlugin({
 			patterns: [
 				{ from: "src/images", to: "images" },
+				{ from: "node_modules/jquery/dist/jquery.min.js", to: "lib" },
+				{ from: "node_modules/slick-carousel/slick/slick.min.js", to: "lib" },
 			],
 		}),
 		new HtmlWebpackPlugin({

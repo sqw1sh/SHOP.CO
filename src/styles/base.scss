@@ -73,10 +73,38 @@ a {
     height: 52px;
     padding-top: 15px;
     padding-bottom: 15px;
+    transition: .3s;
 
     &.btn-empty {
         background-color: transparent;
         border-color: rgba($color: $black-color, $alpha: 10%);
+
+        &:hover {
+            background-color: $black-color;
+            color: $white-color;
+            border-color: transparent;
+        }
+    }
+
+    &.btn-black {
+        background-color: $black-color;
+        color: $white-color;
+
+        &:hover {
+            background-color: $white-color;
+            color: $black-color;
+            border-color: rgba($color: $black-color, $alpha: 10%);
+        }
+    }
+
+    &.btn-white {
+        background-color: $white-color;
+
+        &:hover {
+            background-color: transparent;
+            color: $white-color;
+            border-color: $white-color;
+        }
     }
 }
 

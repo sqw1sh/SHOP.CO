@@ -43,13 +43,30 @@
 
                 .menu-item {
                     .menu-link {
+                        display: inline-block;
                         font-size: 16px;
                         color: $black-color;
+                        transition: .3s;
+                        padding-bottom: 3px;
+                        border-bottom: 1px solid transparent;
+
+                        &:hover {
+                            color: rgba($color: $black-color, $alpha: 60%);
+                            border-bottom-color: rgba($color: $black-color, $alpha: 30%);
+                        }
 
                         &.menu-link-group {
                             display: inline-flex;
                             align-items: center;
                             gap: 4px;
+
+                            &:hover {
+                                svg {
+                                    path {
+                                        fill: rgba($color: $black-color, $alpha: 60%);
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -88,6 +105,11 @@
         .action {
             @include flex-center-between;
             gap: 14px;
+
+            .action-link {
+                width: 24px;
+                height: 24px;
+            }
         }
     }
 }
@@ -119,11 +141,6 @@
 
             .main-action {
                 margin-bottom: 48px;
-
-                .btn-main {
-                    background-color: $black-color;
-                    color: $white-color;
-                }
             }
 
             .main-stats {
@@ -257,6 +274,11 @@
                     border-radius: 20px;
                     position: relative;
                     overflow: hidden;
+                    transition: .3s;
+
+                    &:hover {
+                        box-shadow: 2px 2px 4px rgba($color: $black-color, $alpha: 20%);
+                    }
 
                     &.wide {
                         min-width: 684px;
@@ -309,43 +331,53 @@
                     }
                 }
             }
+        }
 
-            .reviews {
-                display: grid;
-                justify-content: center;
-                grid-template-columns: repeat(auto-fit, 400px);
-                grid-gap: 20px;
+        .reviews {
+            // display: grid;
+            // justify-content: center;
+            // grid-template-columns: repeat(auto-fit, 400px);
+            // grid-gap: 20px;
 
-                .review-item {
-                    border: 1px solid rgba($color: $black-color, $alpha: 10%);
-                    border-radius: 20px;
-                    padding: 28px 32px;
+            .review-item {
+                border: 1px solid rgba($color: $black-color, $alpha: 10%);
+                border-radius: 20px;
+                padding: 28px 32px;
+                min-height: 240px;
+                max-width: 400px;
+                margin-right: 10px;
+                margin-left: 10px;
 
-                    .review-item-rating {
-                        display: flex;
-                        align-items: center;
-                        gap: 6.49px;
-                        margin-bottom: 15px;
+                &.slick-slide {
+                    &:not(.slick-active) {
+                        filter: blur(4px);
                     }
+                }
 
-                    .review-item-author {
-                        display: flex;
-                        align-items: center;
-                        gap: 4px;
-                        margin-bottom: 12px;
+                .review-item-rating {
+                    display: flex;
+                    align-items: center;
+                    gap: 6.49px;
+                    margin-bottom: 15px;
+                }
 
-                        span {
-                            font-family: 'SatoshiBold', sans-serif;
-                            font-size: 20px;
-                            line-height: 22px;
-                        }
-                    }
+                .review-item-author {
+                    display: flex;
+                    align-items: center;
+                    gap: 4px;
+                    margin-bottom: 12px;
 
-                    .review-item-message {
-                        font-size: 16px;
+                    span {
+                        font-family: 'SatoshiBold', sans-serif;
+                        font-size: 20px;
                         line-height: 22px;
-                        color: rgba($color: $black-color, $alpha: 60%);
                     }
+                }
+
+                .review-item-message {
+                    font-size: 16px;
+                    line-height: 22px;
+                    color: rgba($color: $black-color, $alpha: 60%);
                 }
             }
         }
@@ -380,6 +412,11 @@
                         border: 1px solid #D6DCE5;
                         background-color: $white-color;
                         border-radius: 5.38px;
+                        transition: .3s;
+
+                        &:hover {
+                            background-color: rgba($color: $white-color, $alpha: 50%);
+                        }
                     }
                 }
             }
@@ -455,6 +492,11 @@
                             line-height: 19px;
                             color: rgba($color: $black-color, $alpha: 60%);
                             text-decoration: none;
+                            transition: .3s;
+
+                            &:hover {
+                                color: $black-color;
+                            }
                         }
                     }
                 }
@@ -515,7 +557,6 @@
             }
 
             .form-btn {
-                background-color: $white-color;
                 width: 100%;
                 padding: 12px 16px;
                 height: 46px;
