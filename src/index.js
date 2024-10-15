@@ -7,8 +7,8 @@ const discountClose = $("#discount-close");
 
 if (discount && discountClose) {
 	discountClose.on("click", () => {
-        discount.css('display', 'none');
-    });
+		discount.css("display", "none");
+	});
 }
 
 const reviewSlider = $("#review-slider");
@@ -24,5 +24,13 @@ if (reviewSlider && reviewSliderPrev && reviewSliderNext) {
 		nextArrow: reviewSliderNext,
 		slidesToShow: 3,
 		variableWidth: true,
+		responsive: [
+			{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 1,
+				},
+			},
+		],
 	});
 }

@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 $black-color: #000000;
@@ -119,6 +120,7 @@ a {
     display: grid;
     grid-template-columns: repeat(auto-fit, 295px);
     grid-gap: 20px;
+    justify-content: center;
 
     .card-good {
         width: 100%;
