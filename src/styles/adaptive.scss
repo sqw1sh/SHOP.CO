@@ -97,6 +97,7 @@
             .container {
                 .main-title {
                     font-size: 60px;
+                    line-height: 60px;
                     max-width: 520px;
                 }
 
@@ -204,6 +205,7 @@
             .container {
                 .main-title {
                     font-size: 56px;
+                    line-height: 56px;
                 }
 
                 .main-text {
@@ -377,6 +379,22 @@
 
 @media screen and (max-width: 780px) {
     .page {
+        .main {
+            .main-extra {
+                .star {
+                    &:first-child {
+                        top: 610px;
+                        left: 80%;
+                    }
+
+                    &:last-child {
+                        top: 860px;
+                        left: 5%;
+                    }
+                }
+            }
+        }
+
         .style {
             .container {
                 padding: 40px 24px 27px 24px;
@@ -412,6 +430,289 @@
 
             .menu {
                 display: none;
+            }
+        }
+    }
+
+    .page {
+        .main {
+            background-size: 100%;
+            padding-bottom: 540px;
+        }
+    }
+}
+
+@media screen and (max-width: 606px) {
+    .footer {
+        .container {
+            .wrapper {
+                justify-content: center;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .page {
+        .main {
+            .container {
+                .main-title {
+                    font-size: 48px;
+                    line-height: 48px;
+                }
+            }
+
+            .main-extra {
+                .star {
+                    &:first-child {
+                        top: 610px;
+                        left: 80%;
+                        width: 76px;
+                        height: 76px;
+                    }
+
+                    &:last-child {
+                        top: 830px;
+                        left: 5%;
+                        width: 44px;
+                        height: 44px;
+                    }
+                }
+            }
+        }
+
+        .style {
+            .container {
+                .styles {
+                    .style-item {
+                        height: 190px;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer {
+        .callback {
+            .callback-title {
+                font-size: 36px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 501px) {
+    .card-goods {
+        grid-template-columns: repeat(auto-fit, 205px);
+
+        .card-good {
+            .card-good-title {
+                font-size: 16px;
+            }
+
+            .card-good-rating {
+                .card-good-rating-number {
+                    span {
+                        font-size: 12px;
+                    }
+                }
+            }
+
+            .card-good-price {
+                span {
+                    font-size: 20px;
+                }
+
+                .card-good-price-discount {
+                    span {
+                        &:last-child {
+                            font-size: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 493px) {
+    .footer {
+        .callback {
+            .callback-title {
+                font-size: 32px;
+                line-height: 35px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .page {
+        .main {
+            padding-bottom: 460px;
+
+            .container {
+                .main-title {
+                    font-size: 42px;
+                    line-height: 42px;
+                }
+            }
+
+            .main-extra {
+                .star {
+                    &:last-child {
+                        top: 760px;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer {
+        .container {
+            .wrapper {
+                .info {
+                    margin-left: unset;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 456px) {
+    .footer {
+        .callback {
+            padding: 32px 24px 28px 24px;
+
+            .callback-form {
+                width: 100%;
+
+                .form-mail {
+                    input {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .page {
+        .review {
+            .container {
+                .review-header {
+                    .review-title {
+                        font-size: 32px;
+                        line-height: 36px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 444px) {
+    .page {
+        .style {
+            .container {
+                .style-title {
+                    font-size: 32px;
+                    line-height: 36px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 434px) {
+    .page {
+        .new {
+            .container {
+                .new-title {
+                    font-size: 32px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .discount {
+        .container {
+            .discount-text {
+                margin-left: unset;
+                font-size: 12px;
+            }
+
+            .discount-close {
+                display: none;
+            }
+        }
+    }
+
+    .page {
+        .main {
+            padding-bottom: 430px;
+
+            .container {
+                .main-title {
+                    font-size: 36px;
+                    line-height: 34px;
+                }
+
+                .main-text {
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+
+                .main-action {
+                    .btn-main {
+                        width: 100%;
+                    }
+                }
+
+                .main-stats {
+                    .main-stat {
+                        .main-stat-title {
+                            font-size: 24px;
+                        }
+
+                        .main-stat-text {
+                            font-size: 12px;
+                            line-height: 22px;
+                        }
+                    }
+                }
+            }
+
+            .main-extra {
+                .star {
+                    &:first-child {
+                        top: 550px;
+                        left: 75%;
+                    }
+
+                    &:last-child {
+                        top: 720px;
+                    }
+                }
+            }
+        }
+
+        .top {
+            .top-title {
+                font-size: 38px;
+            }
+        }
+
+        .style {
+            .container {
+                .styles {
+                    .style-item {
+                        .style-item-title {
+                            font-size: 24px;
+                        }
+                    }
+                }
             }
         }
     }
