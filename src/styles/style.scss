@@ -35,6 +35,16 @@
     .container {
         @include flex-center-between;
 
+        .mobile-wrapper {
+            .burger {
+                cursor: pointer;
+            }
+
+            .menu-mobile {
+                display: none;
+            }
+        }
+
         .menu {
             .menu-list {
                 list-style: none;
@@ -109,6 +119,10 @@
             .action-link {
                 width: 24px;
                 height: 24px;
+
+                &.mobile {
+                    display: none;
+                }
             }
         }
     }
@@ -321,6 +335,10 @@
                 @include flex-end-between;
                 margin-bottom: 40px;
 
+                .review-title {
+                    text-align: left;
+                }
+
                 .review-action {
                     display: flex;
                     align-items: center;
@@ -393,6 +411,7 @@
     .container {
         .wrapper {
             @include flex-center-between;
+            gap: 113.5px;
 
             &:last-child {
                 .copy {
@@ -416,6 +435,44 @@
 
                         &:hover {
                             background-color: rgba($color: $white-color, $alpha: 50%);
+                        }
+                    }
+                }
+            }
+
+            .help-wrapper {
+                @include flex-center-between;
+                width: 100%;
+
+                .help {
+                    .help-title {
+                        font-family: 'SatoshiMedium', sans-serif;
+                        font-size: 16px;
+                        letter-spacing: 3px;
+                        line-height: 18px;
+                        text-transform: uppercase;
+                        margin-bottom: 26px;
+                    }
+    
+                    .help-list {
+                        list-style: none;
+    
+                        .help-list-item {
+                            &:not(:last-child) {
+                                margin-bottom: 20px;
+                            }
+    
+                            a {
+                                font-size: 16px;
+                                line-height: 19px;
+                                color: rgba($color: $black-color, $alpha: 60%);
+                                text-decoration: none;
+                                transition: .3s;
+    
+                                &:hover {
+                                    color: $black-color;
+                                }
+                            }
                         }
                     }
                 }
@@ -463,39 +520,6 @@
                         svg {
                             path {
                                 fill: $black-color;
-                            }
-                        }
-                    }
-                }
-            }
-
-            .help {
-                .help-title {
-                    font-family: 'SatoshiMedium', sans-serif;
-                    font-size: 16px;
-                    letter-spacing: 3px;
-                    line-height: 18px;
-                    text-transform: uppercase;
-                    margin-bottom: 26px;
-                }
-
-                .help-list {
-                    list-style: none;
-
-                    .help-list-item {
-                        &:not(:last-child) {
-                            margin-bottom: 20px;
-                        }
-
-                        a {
-                            font-size: 16px;
-                            line-height: 19px;
-                            color: rgba($color: $black-color, $alpha: 60%);
-                            text-decoration: none;
-                            transition: .3s;
-
-                            &:hover {
-                                color: $black-color;
                             }
                         }
                     }
@@ -560,6 +584,58 @@
                 width: 100%;
                 padding: 12px 16px;
                 height: 46px;
+            }
+        }
+    }
+}
+
+.mobile-header-menu {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: $white-color;
+    z-index: 999;
+    padding: 24px;
+    transform: translateX(-100%);
+    transition: .3s;
+
+    &.active {
+        transform: translateX(0);
+    }
+
+    .close {
+        text-align: right;
+
+        svg {
+            cursor: pointer;
+
+            path {
+                fill: $black-color;
+            }
+        }
+    }
+
+    .menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+
+        .menu-list {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 24px;
+            list-style: none;
+
+            .menu-item {
+                .menu-link {
+                    color: $black-color;
+                }
             }
         }
     }

@@ -34,3 +34,19 @@ if (reviewSlider && reviewSliderPrev && reviewSliderNext) {
 		],
 	});
 }
+
+const burgerBtn = document.getElementById("burger");
+const closeBurgerBtn = document.getElementById("close-burger");
+const mobileMenu = document.getElementById("mobile-menu");
+
+if (burgerBtn && mobileMenu) {
+	$(burgerBtn).on("click", () => {
+		$(mobileMenu).addClass('active');
+	});
+}
+
+if (closeBurgerBtn && mobileMenu) {
+	$(closeBurgerBtn).on("click", () => {
+		$(mobileMenu).removeClass('active');
+	});
+}
