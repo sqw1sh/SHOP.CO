@@ -239,12 +239,6 @@
                 text-align: center;
                 margin-bottom: 64px;
             }
-
-            hr {
-                height: 1px;
-                border: 0;
-                border-top: 1px solid rgba($color: $black-color, $alpha: 10%);
-            }
         }
     }
 
@@ -400,6 +394,44 @@
             }
         }
     }
+
+    .similar {
+        .container {
+            .similar-title {
+                margin-bottom: 55px;
+            }
+        }
+    }
+
+    .breadcrumb {
+        .container {
+            .menu {
+                margin-top: 24px;
+
+                .menu-list {
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+
+                    .menu-item {
+                        display: flex;
+                        align-items: center;
+                        gap: 4px;
+
+                        &:last-child {
+                            .menu-link {
+                                color: $black-color;
+                            }
+                        }
+
+                        .menu-link {
+                            color: rgba($color: $black-color, $alpha: 60%);
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 .footer {
@@ -530,9 +562,6 @@
         hr {
             margin-top: 50px;
             margin-bottom: 25px;
-            border: 0;
-            border-top: 1px solid rgba($color: $black-color, $alpha: 10%);
-            height: 1px;
         }
     }
 

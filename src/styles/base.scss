@@ -199,3 +199,9 @@ a {
         }
     }
 }
+
+hr {
+    border: 0;
+    border-top: 1px solid rgba($color: $black-color, $alpha: 10%);
+    height: 1px;
+}
