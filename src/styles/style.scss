@@ -432,6 +432,155 @@
             }
         }
     }
+
+    .product {
+        padding-top: 36px;
+
+        .container {
+            @include flex-center-between;
+            gap: 40px;
+            max-width: 1250px;
+
+            .product-images {
+                display: flex;
+                gap: 14px;
+
+                .left-side {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 14px;
+
+                    img {
+                        border-radius: 20px;
+                        max-width: 152px;
+                    }
+                }
+
+                .right-side {
+                    min-width: 444px;
+                    overflow: hidden;
+
+                    img {
+                    border-radius: 20px;
+                    width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+
+            .product-description {
+                .product-title {
+                    font-family: 'IntegralCFBold', sans-serif;
+                    font-size: 40px;
+                    margin-bottom: 14px;
+                }
+
+                .product-rating {
+                    display: flex;
+                    align-items: center;
+                    gap: 16px;
+                    margin-bottom: 14px;
+
+                    .stars {
+                        display: flex;
+                        align-items: center;
+                        gap: 7px;
+                    }
+
+                    .numbers {
+                        font-size: 0;
+                        span {
+                            font-size: 16px;
+
+                            &:last-child {
+                                color: rgba($color: $black-color, $alpha: 60%);
+                            }
+                        }
+                    }
+                }
+
+                .product-price {
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                    margin-bottom: 20px;
+
+                    span {
+                        font-family: 'SatoshiBold', sans-serif;
+                        font-size: 32px;
+                    }
+
+                    .product-discount {
+                        display: flex;
+                        align-items: center;
+                        gap: 12px;
+
+                        span {
+                            &:first-child {
+                                color: rgba($color: $black-color, $alpha: 30%);
+                                text-decoration: line-through;
+                            }
+
+                            &:last-child {
+                                @include flex-center;
+                                color: #FF3333;
+                                background-color: rgba($color: #FF3333, $alpha: 10%);
+                                border-radius: 62px;
+                                font-family: 'SatoshiMedium', sans-serif;
+                                font-size: 16px;
+                                padding: 6px 14px;
+                            }
+                        }
+                    }
+                }
+
+                .product-text {
+                    color: rgba($color: $black-color, $alpha: 60%);
+                    line-height: 22px;
+                    margin-bottom: 24px;
+                }
+
+                .product-color {
+                    margin-top: 24px;
+                    margin-bottom: 24px;
+
+                    p {
+                        color: rgba($color: $black-color, $alpha: 60%);
+                        margin-bottom: 16px;
+                    }
+
+                    .colors {
+                        display: flex;
+                        align-items: center;
+                        gap: 16px;
+
+                        label {
+                            display: inline-block;
+                            width: 37px;
+                            height: 37px;
+                            border-radius: 50%;
+
+                            &:first-child {
+                                background-color: #4F4631;
+                            }
+
+                            &:nth-child(2) {
+                                background-color: #314F4A;
+                            }
+
+                            &:last-child {
+                                background-color: #31344F;
+                            }
+
+                            input {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 .footer {
